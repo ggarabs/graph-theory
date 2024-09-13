@@ -203,16 +203,12 @@ void marcaVerticesComArestaExcluida(Vert G[], int ordem, int index, int* compone
 
 	bool foiMarcado = true;
 	while(foiMarcado || pontLento <= pontRapido){
-		// printf("lento: %d rapido: %d\n", pontLento, pontRapido);
 		Aresta* aux = atual.prim;
-		// printf("Atual: %d\n", atual.nome);
 		foiMarcado = false;
 		for(; aux != NULL; aux = aux->prox){
-			// printf("O for entrou no %d\n", aux->outroExtr);
 			if((atual.nome == extr.nome && aux->outroExtr == arestaExcluida.outroExtr) || (atual.nome == arestaExcluida.outroExtr && aux->outroExtr == extr.nome)){
 				continue;
 			}else if(!componente[aux->outroExtr]){
-				// printf("Marquei o %d\n", aux->outroExtr);
 				componente[aux->outroExtr] = compIndex;
 				if(aux->outroExtr != atual.nome){
 					lista[++pontRapido] = aux->outroExtr;
@@ -245,7 +241,6 @@ int contaComponentesExcluindoVertice(Vert G[], int ordem, Vert verticeExcluido){
 
 	for(int i = 0; i < ordem; i++){
 		if(G[i].nome != verticeExcluido.nome && !componente[G[i].nome]){
-			// printf("Entrei no %d\n", G[i].nome);
 			marcaVerticesComVerticeExcluido(G, ordem, i, componente, ++compIndex, verticeExcluido);
 		}
 	}
@@ -261,7 +256,7 @@ int contaComponentesExcluindoAresta(Vert G[], int ordem, Vert extr, Aresta* outr
 
 	for(int i = 0; i < ordem; i++){
 		if(!componente[G[i].nome]){
-			marcaVerticesComArestaExcluida(G, ordem, i, componente, compIndex, extr, *outroExtr);
+			marcaVerticesComArestaExcluida(G, ordem, i, componente, ++compIndex, extr, *outroExtr);
 		}
 	}
 }
