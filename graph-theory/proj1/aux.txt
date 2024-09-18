@@ -1,0 +1,894 @@
+
+Ordem:   8
+Lista de Adjacencia:
+
+    v0:   v3  v2  v1  v1  v0
+    v1:   v0  v0
+    v2:   v5  v4  v0
+    v3:   v5  v0
+    v4:   v5  v2
+    v5:   v4  v3  v2
+    v6:   v7
+    v7:   v6
+
+Esse grafo não é conexo.
+O número de componentes conexas desse grafo é: 2
+Vértices de corte: 0 
+Entrei no vértice 0
+Acessei o vizinho 3
+Eliminei a aresta v0-v3
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+Marquei o 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+Atual: 3
+O for entrou no 5
+O for entrou no 0
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 2
+Eliminei a aresta v0-v2
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 3
+O for entrou no 2
+Marquei o 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+O for entrou no 0
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 1
+Eliminei a aresta v0-v1
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+Chamei a função no 1
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 1
+Eliminei a aresta v0-v1
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+Chamei a função no 1
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 0
+Eliminei a aresta v0-v0
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 1
+Acessei o vizinho 0
+Eliminei a aresta v1-v0
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+Chamei a função no 1
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 0
+Eliminei a aresta v1-v0
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+Chamei a função no 1
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 2
+Acessei o vizinho 5
+Eliminei a aresta v2-v5
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 4
+Eliminei a aresta v2-v4
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 0
+Eliminei a aresta v2-v0
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 3
+O for entrou no 2
+Marquei o 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+O for entrou no 0
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 3
+Acessei o vizinho 5
+Eliminei a aresta v3-v5
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+Marquei o 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 0
+Eliminei a aresta v3-v0
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+Marquei o 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+Atual: 3
+O for entrou no 5
+O for entrou no 0
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 4
+Acessei o vizinho 5
+Eliminei a aresta v4-v5
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 2
+Eliminei a aresta v4-v2
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 5
+Acessei o vizinho 4
+Eliminei a aresta v5-v4
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 3
+Eliminei a aresta v5-v3
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+Marquei o 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Acessei o vizinho 2
+Eliminei a aresta v5-v2
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+Marquei o 7
+Atual: 7
+O for entrou no 6
+To aqui no 7
+Entrei no vértice 6
+Acessei o vizinho 7
+Eliminei a aresta v6-v7
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+To aqui no 7
+Chamei a função no 7
+Atual: 7
+O for entrou no 6
+Entrei no vértice 7
+Acessei o vizinho 6
+Eliminei a aresta v7-v6
+To aqui no 0
+Chamei a função no 0
+Atual: 0
+O for entrou no 3
+Marquei o 3
+O for entrou no 2
+Marquei o 2
+O for entrou no 1
+Marquei o 1
+O for entrou no 1
+O for entrou no 0
+Atual: 3
+O for entrou no 5
+Marquei o 5
+O for entrou no 0
+Atual: 2
+O for entrou no 5
+O for entrou no 4
+Marquei o 4
+O for entrou no 0
+Atual: 1
+O for entrou no 0
+O for entrou no 0
+Atual: 5
+O for entrou no 4
+O for entrou no 3
+O for entrou no 2
+Atual: 4
+O for entrou no 5
+O for entrou no 2
+To aqui no 1
+To aqui no 2
+To aqui no 3
+To aqui no 4
+To aqui no 5
+To aqui no 6
+Chamei a função no 6
+Atual: 6
+O for entrou no 7
+To aqui no 7
+Chamei a função no 7
+Atual: 7
+O for entrou no 6
+Arestas de corte: 
+
+Ordem:   8
+Lista de Adjacencia:
+
+    v0:   v1  v1  v1  v1
+    v1:   v0  v0  v0  v0
+    v2: 
+    v3: 
+    v4: 
+    v5: 
+    v6:   v7  v7
+    v7:   v6  v6
+
+

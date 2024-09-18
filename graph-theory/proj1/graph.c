@@ -10,7 +10,7 @@
  * Estrutura de dados para representar grafos
  */
 typedef struct aresta{ /* Celula de uma lista de arestas */
-	int    outroExtr;
+	int outroExtr;
 	struct aresta *prox;
 }Aresta;
 
@@ -26,15 +26,6 @@ void criaGrafo(Vert **G, int ordem);
 void destroiGrafo(Vert **G, int ordem);
 int  incluiNovaAresta(Vert G[], int ordem, int v1, int v2);
 void imprimeGrafo(Vert G[], int ordem);
-int eConexo(Vert G[], int ordem);
-void marcaVertices(Vert G[], int ordem, int index, int* componente, int compIndex);
-void marcaVerticesComVerticeExcluido(Vert G[], int ordem, int index, int* componente, int compIndex, Vert vertice);
-void marcaVerticesComArestaExcluida(Vert G[], int ordem, int index, int* componente, int compIndex, Aresta* arestaExcluida);
-int contaComponentes(Vert G[], int ordem);
-int contaComponentesExcluindoVertice(Vert G[], int ordem, Vert verticeExcluido);
-int contaComponentesExcluindoAresta(Vert G[], int ordem, Vert extr, Aresta* outroExtr);
-Vert* obtemVerticesCorte(Vert G[], int ordem, int* numeroVerticesCorte);
-Vert* obtemArestasCorte(Vert G[], int ordem, Vert* ArestasCorte);
 
 /*
  * Criacao de um grafo com ordem predefinida (passada como argumento),
@@ -108,25 +99,52 @@ void imprimeGrafo(Vert G[], int ordem){
 
 	for (i=0; i<ordem; i++){
 		printf("\n    v%d: ", i);
-		aux = G[i].prim;
+		aux= G[i].prim;
 		for(; aux != NULL; aux = aux->prox) printf("  v%d", aux->outroExtr);
 	}
 	printf("\n\n");
 }
 
 int eConexo(Vert G[], int ordem){
-	return contaComponentes(G, ordem) == 1;
+	bool* visitado = (bool*)calloc(ordem, sizeof(bool));
+	int* lista = (int*)calloc(ordem, sizeof(int));
+
+	int verticesMarcados = 1, pontLento = 0, pontRapido = 0;
+	Vert atual = G[0];
+	visitado[atual.nome] = 1;
+
+	bool foiMarcado = true;
+	while(foiMarcado){
+		Aresta* aux = atual.prim;
+		foiMarcado = false;
+		for(; aux != NULL; aux = aux->prox){
+			if(!visitado[aux->outroExtr]){
+				visitado[aux->outroExtr] = true;
+				if(aux->outroExtr != atual.nome){
+					lista[pontRapido++] = aux->outroExtr;
+					verticesMarcados++;
+					foiMarcado = true;
+				}
+			}
+		}
+		atual = G[lista[pontLento++]];
+	}
+
+	free(visitado);
+	free(lista);
+
+	return ordem == verticesMarcados;
 }
 
 void marcaVertices(Vert G[], int ordem, int index, int* componente, int compIndex){
 	int* lista = (int*)calloc(ordem, sizeof(int));
 
-	int verticesMarcados = 1, pontLento = 1, pontRapido = 1;
+	int verticesMarcados = 1, pontLento = 0, pontRapido = 0;
 	Vert atual = G[index];
 	componente[atual.nome] = compIndex;
 
 	bool foiMarcado = true;
-	while(foiMarcado || pontLento <= pontRapido){
+	while(foiMarcado){
 		Aresta* aux = atual.prim;
 		foiMarcado = false;
 		for(; aux != NULL; aux = aux->prox){
@@ -176,7 +194,7 @@ void marcaVerticesComVerticeExcluido(Vert G[], int ordem, int index, int* compon
 	free(lista);
 }
 
-void marcaVerticesComArestaExcluida(Vert G[], int ordem, int index, int* componente, int compIndex, Aresta* arestaExcluida){
+void marcaVerticesComArestaExcluida(Vert G[], int ordem, int index, int* componente, int compIndex, Vert extr, Aresta* arestaExcluida){
 	int* lista = (int*)calloc(ordem, sizeof(int));
 
 	int verticesMarcados = 1, pontLento = 0, pontRapido = 0;
@@ -185,12 +203,16 @@ void marcaVerticesComArestaExcluida(Vert G[], int ordem, int index, int* compone
 
 	bool foiMarcado = true;
 	while(foiMarcado || pontLento <= pontRapido){
+		// printf("lento: %d rapido: %d\n", pontLento, pontRapido);
 		Aresta* aux = atual.prim;
+		// printf("Atual: %d\n", atual.nome);
 		foiMarcado = false;
 		for(; aux != NULL; aux = aux->prox){
+			// printf("O for entrou no %d\n", aux->outroExtr);
 			if(aux == arestaExcluida){
 				continue;
 			}else if(!componente[aux->outroExtr]){
+				// printf("Marquei o %d\n", aux->outroExtr);
 				componente[aux->outroExtr] = compIndex;
 				if(aux->outroExtr != atual.nome){
 					lista[++pontRapido] = aux->outroExtr;
@@ -208,7 +230,9 @@ int contaComponentes(Vert G[], int ordem){
 	int* componente = (int*)calloc(ordem, sizeof(int));
 	int compIndex = 0;
 
-	for(int i = 0; i < ordem; i++) if(!componente[G[i].nome]) marcaVertices(G, ordem, i, componente, ++compIndex);
+	for(int i = 0; i < ordem; i++)
+		if(!componente[G[i].nome]) 
+			marcaVertices(G, ordem, i, componente, ++compIndex);
 
 	free(componente);
 
@@ -221,6 +245,7 @@ int contaComponentesExcluindoVertice(Vert G[], int ordem, Vert verticeExcluido){
 
 	for(int i = 0; i < ordem; i++){
 		if(G[i].nome != verticeExcluido.nome && !componente[G[i].nome]){
+			// printf("Entrei no %d\n", G[i].nome);
 			marcaVerticesComVerticeExcluido(G, ordem, i, componente, ++compIndex, verticeExcluido);
 		}
 	}
@@ -234,9 +259,13 @@ int contaComponentesExcluindoAresta(Vert G[], int ordem, Vert extr, Aresta* outr
 	int* componente = (int*)calloc(ordem, sizeof(int));
 	int compIndex = 0;
 
+	// printf("Eliminei a aresta v%d-v%d\n", extr.nome, outroExtr->outroExtr);
+
 	for(int i = 0; i < ordem; i++){
+		// printf("To aqui no %d\n", G[i].nome);
 		if(!componente[G[i].nome]){
-			marcaVerticesComArestaExcluida(G, ordem, i, componente, ++compIndex, outroExtr);
+			// printf("Chamei a função no %d\n", G[i].nome);
+			marcaVerticesComArestaExcluida(G, ordem, i, componente, ++compIndex, extr, outroExtr);
 		}
 	}
 
@@ -260,10 +289,12 @@ Vert* obtemVerticesCorte(Vert G[], int ordem, int* numeroVerticesCorte){
 Vert* obtemArestasCorte(Vert G[], int ordem, Vert* ArestasCorte){
 	int numeroComponentes = contaComponentes(G, ordem);
 	for(int i = 0; i < ordem; i++){
+		// printf("Entrei no vértice %d\n", G[i].nome);
 		Vert atual = G[i];
 		Aresta *aux = atual.prim;
 
 		for(; aux != NULL; aux = aux->prox){
+			// printf("Acessei o vizinho %d\n", aux->outroExtr);
 			if(contaComponentesExcluindoAresta(G, ordem, G[i], aux) != numeroComponentes){
 				incluiNovaAresta(ArestasCorte, ordem, G[i].nome, aux->outroExtr);
 			}
@@ -282,17 +313,27 @@ int main(int argc, char *argv[]) {
 	int ordemG= 8;
 		
 	criaGrafo(&G, ordemG);
-	incluiNovaAresta(G,ordemG,0,0);
-	incluiNovaAresta(G,ordemG,0,1);
-	incluiNovaAresta(G,ordemG,0,1);
-	incluiNovaAresta(G,ordemG,0,2);
-	incluiNovaAresta(G,ordemG,0,3);
+	// incluiNovaAresta(G,ordemG,0,0);
+	// incluiNovaAresta(G,ordemG,0,1);
+	// incluiNovaAresta(G,ordemG,0,1);
+	// incluiNovaAresta(G,ordemG,0,2);
+	// incluiNovaAresta(G,ordemG,0,3);
+	// incluiNovaAresta(G,ordemG,2,4);
+	// incluiNovaAresta(G,ordemG,2,5);
+	// incluiNovaAresta(G,ordemG,3,5);
+	// incluiNovaAresta(G,ordemG,4,5);
+	// incluiNovaAresta(G,ordemG,6,7);
+
+	incluiNovaAresta(G,ordemG,4,5);
 	incluiNovaAresta(G,ordemG,2,4);
 	incluiNovaAresta(G,ordemG,2,5);
-	incluiNovaAresta(G,ordemG,3,5);
-	incluiNovaAresta(G,ordemG,4,5);
+	incluiNovaAresta(G,ordemG,1,2);
+	incluiNovaAresta(G,ordemG,1,6);
+	incluiNovaAresta(G,ordemG,1,3);
+	incluiNovaAresta(G,ordemG,3,6);
 	incluiNovaAresta(G,ordemG,6,7);
-	incluiNovaAresta(G,ordemG,2,7);
+	incluiNovaAresta(G,ordemG,3,7);
+
 	imprimeGrafo(G, ordemG);
 
 	if(eConexo(G, ordemG)) printf("Esse grafo é conexo.\n");
@@ -315,7 +356,8 @@ int main(int argc, char *argv[]) {
 	printf("Arestas de corte: \n");
 	imprimeGrafo(arestasCorte, ordemG);
 	printf("\n");
-       
-	// destroiGrafo(&G, ordemG);
+
+	destroiGrafo(&G, ordemG);
+//    system("PAUSE");
 	return 0;
 }
